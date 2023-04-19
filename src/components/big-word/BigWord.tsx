@@ -1,11 +1,5 @@
 import React from 'react'
-
-export type BigWordProps = {
-  contentColor: string;
-  size: number;
-  content: string;
-  shadowColor: string;
-}
+import { BigWordProps } from "../../../types";
 
 
 function generateTextShadow(color: string, size: number) {
@@ -17,8 +11,11 @@ function generateTextShadow(color: string, size: number) {
 }
 
 
-export default function BigWord({ contentColor, shadowColor, content, size }: BigWordProps) {
+export default function BigWord({ contentColor, shadowColor, content, size, kerning }: BigWordProps) {
+  console.log(contentColor)
   return (
-    <h2 style={{ color: contentColor, fontSize: `${size * 8}px`, textShadow: `${generateTextShadow(shadowColor, size)}`, fontWeight: "bold", fontFamily: "sans-serif" }}>{content}</h2 >
+    <span style={{ color: contentColor, marginRight: `${kerning}px`, fontSize: `${size * 8}px`, textShadow: `${generateTextShadow(shadowColor, size)}`, fontWeight: "bold", fontFamily: "sans-serif" }}>{content}</span >
   )
 }
+
+

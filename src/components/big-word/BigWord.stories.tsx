@@ -1,8 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import BigWord from './BigWord';
 
-
-
 export default {
   component: BigWord,
   title: "UI/BigWord"
@@ -11,9 +9,9 @@ export default {
 
 export const Primary: StoryObj<typeof BigWord> = {
   args: {
-    contentColor: "green",
+    contentColor: "red",
     size: 10,
-    content: "yes word",
-    shadowColor: "red"
+    content: "BIG BIG WORD",
+    shadowColor: "blue"
   },
 };
